@@ -1,0 +1,115 @@
+-- Creating Database 
+CREATE DATABASE IF NOT EXISTS atm_plus;
+
+USE atm_plus;
+
+CREATE TABLE IF NOT EXISTS customerdata (
+	accountId VARCHAR(50),
+	pinNumber INT,
+	amount FLOAT,
+	transactionDate DATE,
+	transactionNumber VARCHAR(50),
+	firstName VARCHAR(255),
+	lastName VARCHAR(255),
+	dateOfBirth DATE,
+	phoneNumber INTEGER,
+	province VARCHAR(50),
+	accountType VARCHAR(50),
+	isActive BOOL
+);
+
+
+INSERT INTO customerdata (accountId, pinNumber, isActive)
+VALUES
+('222001-116W206K', 8197, 0),
+('222002-112Z471F', 6384, 0),
+('222003-116N308V',	1508, 0),
+('222004-104C597L',	8783, 0),
+('222005-102B715I', 8962, 0),
+('222006-120G918J',	8162, 0),
+('222007-111B617Y',	8380, 0),
+('222008-111B239D', 1013, 0),
+('222009-114B251J',	4194, 0),
+('222010-119Q852Q',	8765, 0),
+('222011-117P199I',	9159, 0),
+('222012-102Y459P',	8095, 0),
+('222013-120F402P',	2716, 0),
+('222014-121L975O', 3885, 0),
+('222015-111Z769X', 3022, 0),
+('222016-109E407G',	2401, 0),
+('222017-105M113K', 9779, 0),
+('222018-119P842L', 7176, 0),
+('222019-120V289Q', 4245, 0),
+('222020-122R136R', 1627, 0),
+('222021-109F750Z', 4884, 0),
+('222022-114N632D', 4834, 0),
+('222023-120M300D', 9459, 0),
+('222024-104C825S', 4379, 0),
+('222025-115H468Q', 7428, 0),
+('111001-122F727WI', 3684, 0),
+('111002-120L455XO', 8245, 0),
+('111003-118O996GT', 6260, 0),
+('111004-110Q369PC', 5710, 0),
+('111005-105T239GP', 9295, 0),
+('111006-114B597NR', 9529, 0),
+('111007-123X585JW', 4189, 0),
+('111008-113T665VJ', 9449, 0),
+('111009-102G443RC', 6008, 0),
+('111010-106S735RU', 6309, 0),
+('111011-117H880KU', 4106, 0),
+('111012-109U564BL', 2030, 0),
+('111013-103C952FD', 9202, 0),
+('111014-114A354PD', 8452, 0),
+('111015-107R396HO', 1374, 0),
+('111016-118H700YG', 6428, 0),
+('111017-105P805KB', 1484, 0),
+('111018-104C358OJ', 8854, 0),
+('111019-110S565TH', 5146, 0),
+('111020-118H922OI', 7123, 0),
+('111021-117V850PJ', 4226, 0),
+('111022-117Q577KB', 7169, 0),
+('111023-119P293CS', 2323, 0),
+('111024-101O818AY', 1331, 0),
+('111025-125S322TF', 7090, 0);
+
+
+-- Creating table provinces
+CREATE TABLE IF NOT EXISTS provinces (
+	provinceId INT AUTO_INCREMENT PRIMARY KEY,
+    provinceName VARCHAR(255)
+);
+
+INSERT INTO provinces (provinceName)
+VALUES
+('BC'),
+('AL'),
+('MB'),
+('ON'),
+('YT'),
+('QC'),
+('NF'),
+('NB'),
+('NS');
+
+-- Creating table accounts
+CREATE TABLE IF NOT EXISTS accounts (
+	accountId VARCHAR(50) PRIMARY KEY,
+    pinNumber INT,
+    firstName VARCHAR(255),
+    lastName VARCHAR(255),
+    dateOfBirth DATE,
+    phoneNumber INT,
+    accountType VARCHAR(255),
+    provinceId INT,
+    isActive BOOL,
+    FOREIGN KEY (provinceId) REFERENCES provinces(provinceId)
+);
+
+-- Creating table transactions
+CREATE TABLE IF NOT EXISTS transactions (
+    transactionDate DATE,
+    transactionNumber VARCHAR(255) PRIMARY KEY,
+    amount FLOAT,
+    accountId VARCHAR(50),
+    FOREIGN KEY (accountId) REFERENCES accounts (accountId)
+);
