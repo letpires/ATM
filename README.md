@@ -24,13 +24,13 @@ This project is an automated teller machine (ATM) simulator implemented in Pytho
   
 ## ⚡️ Requirements
 
-To run this ATM simulator project in Python, you need to have Python 3 installed on your machine. Furthermore, the project depends on some specific libraries. It is essential to have the `mysql-connector-python` library installed to manage the connection to the MySQL database. For calculation and data visualization functionalities, the numpy and matplotlib libraries are equally important. Make sure you have all of these dependencies installed to ensure the simulator works correctly.
+To run this ATM simulator project in Python, you need to have **Python 3** installed on your machine. Furthermore, the project depends on some specific libraries. It is essential to have the `mysql-connector-python` library installed to manage the connection to the MySQL database. For calculation and data visualization functionalities, the **numpy** and **matplotlib** libraries are equally important. Make sure you have all of these dependencies installed to ensure the simulator works correctly.
 
 ## Configuration
 
 1. Clone the repository;
 2. Install dependencies;
-3. Execute ATM simulator
+3. Execute ATM simulator.
 
 ## Database access
 
@@ -50,11 +50,11 @@ Before using the simulator, you must configure the database by running an SQL sc
 - Change the connection information to match your local database credentials.
 - Save the file with the new settings.
 
-## Contribution
+## ⚡ Contribution
 
 Your contribution is very welcome in this project! If you have ideas to improve the ATM simulator or want to add new features, feel free to suggest changes.
 
-## Challenge Coming Soon!
+## 🔥 Challenge Coming Soon!
 
 Stay tuned: in the next few days, I will launch a challenge related to this project. It will be an excellent opportunity to test your skills, collaborate and possibly see your ideas being implemented. More details will be shared soon on my social media and GitHub.
 
