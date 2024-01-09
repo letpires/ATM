@@ -49,12 +49,6 @@ def GenerateTransactionNumber(account_logged):
     current_timestamp = int(time.time())
     transaction_number = f'TR-{account_logged}-{current_timestamp}-{len(transaction_history) + 1}'
 
-    # # Verifique se o número de transação é único
-    # while transaction_number in transaction_history:
-    #     # Se não for único, regenere com um novo contador
-    #     transaction_number = f'#TN-{current_timestamp}-{len(transaction_history) + 1}'
-    
-    # Adicione o número de transação à lista de histórico
     transaction_history.append(transaction_number)
     
     return transaction_number
@@ -74,7 +68,6 @@ def Deposit(account_logged):
     # Add deposit to transaction history
     hist_transactions.append(deposit)
 
-    #current_date = date.today() # Just get the date
     # Get current date and time and format it
     current_date = datetime.now() 
     formatted_date = current_date.strftime("%m/%d/%Y %H:%M:%S")
@@ -335,10 +328,6 @@ while True:
                 dates = []
                 numbers = []
 
-                # print(open_accounts_list)
-                #Printa número da conta do primeiro - proximo open_Accounts_list[1][0]
-                #print(open_accounts_list[0][0]) 
-                # print(open_accounts_list[0][1]['type_transaction'])
 
                 if len(open_accounts_list) == 0:
                     print("You have no open account yet!")

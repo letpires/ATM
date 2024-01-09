@@ -9,7 +9,6 @@
 # IMPORTS USED THROUGHOUT THE CODE:
 import time
 from datetime import datetime
-# from datetime import date
 import numpy as np
 
 # Visualization
