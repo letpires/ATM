@@ -54,9 +54,19 @@ Before using the simulator, you must configure the database by running an SQL sc
 
 Your contribution is very welcome in this project! If you have ideas to improve the ATM simulator or want to add new features, feel free to suggest changes.
 
-## 🔥 Challenge Coming Soon!
+## 🔥 ATM Challenge!
 
-Stay tuned: in the next few days, I will launch a challenge related to this project. It will be an excellent opportunity to test your skills, collaborate and possibly see your ideas being implemented. More details will be shared soon on my social media and GitHub.
+This challenge aims to create an interactive user interface for an ATM (Automated Teller Machine) simulator using Streamlit in Python or another tool of your choice. Streamlit is an excellent tool for data scientists and Python programmers to quickly create web applications.
+
+I have already started the challenge using Streamlit. I only created the interface, without adding it to the ATM code. The code is available by CLICKING HERE. And to run this application you can run the line of code below
+
+```py -m streamlit run atm_streamlit.py```
+
+It's an excellent opportunity to test your skills, collaborate and learn more😊
+
+### Share your work!
+
+After completing your interface, share your work by sending screenshots, videos or the code itself. Use the hashtag ***#ATMChallenge*** on your social media to share your progress and see what others are creating.
 
 -- 
 
